@@ -2,13 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-
+import {FormsModule} from '@angular/forms';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { PotentialComponent } from './potential/potential.component';
+import { ArrayComponent } from './array/array.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+ CalculatorComponent,
+ PotentialComponent,
+ ArrayComponent
+    
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
