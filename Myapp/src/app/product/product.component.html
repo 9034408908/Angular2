@@ -1,0 +1,18 @@
+<p>
+  Name : <input [(ngModel)]="name">
+</p>
+<p>
+  Cost :
+  <input [(ngModel)]="cost">
+</p>
+<table>
+  <tr *ngFor="let x of products">
+
+    <td>{{x.name}}</td>
+    <td>{{x.cost}}</td>
+  </tr>
+</table>
+
+<p>
+  <button (click)="save()">Save</button>
+</p>

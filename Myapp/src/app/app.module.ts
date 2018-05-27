@@ -6,12 +6,20 @@ import {FormsModule} from '@angular/forms';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { PotentialComponent } from './potential/potential.component';
 import { ArrayComponent } from './array/array.component';
+import { MarksComponent } from './marks/marks.component';
+import { ProductComponent } from './product/product.component';
+import { CrudeproductComponent } from './crudeproduct/crudeproduct.component';
+import { AssetcurdeComponent } from './assetcurde/assetcurde.component';
 @NgModule({
   declarations: [
     AppComponent,
  CalculatorComponent,
  PotentialComponent,
- ArrayComponent
+ ArrayComponent,
+ MarksComponent,
+ ProductComponent,
+ CrudeproductComponent,
+ AssetcurdeComponent
     
   ],
   imports: [

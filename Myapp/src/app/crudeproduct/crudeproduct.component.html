@@ -1,0 +1,33 @@
+<p>
+  Nmae:<input [(ngModel)]="doc.name">
+</p>
+<p>
+  Specilization:
+  <input [(ngModel)]="doc.specilization">
+</p>
+<p>
+   Gender:
+  <input [(ngModel)]="doc.gender">
+</p>
+<p>
+  Mobile:
+  <input [(ngModel)]="doc.mobile">
+</p>
+<button *ngIf="btn_stt" (click)="save()">Save Details</button>
+<button *ngIf="!btn_stt" (click)="update()">Update Details</button> 
+<table class="table table-bordered">
+  <th>Name</th> <th>Pic</th><th>Specilization</th><th>Gender</th><th>Mobile</th>
+  <tr *ngFor="let x of doctor; let i=index;">
+    <td>{{i}}</td>
+    <td>{{x.name}}</td>
+    <td><img src ="{{x.pic}}" width="100" height="100"></td>
+    <td>{{x.specilization}}</td>
+    <td>{{x.gender}}</td>
+    <td>{{x.mobile}}</td>
+    <button (click)="delete(i)">Delete Details</button><br>
+    <button (click)="edit(x)">Edit Details</button>
+
+  </tr>
+</table>
+
+
