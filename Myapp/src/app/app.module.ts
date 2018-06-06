@@ -10,6 +10,9 @@ import { MarksComponent } from './marks/marks.component';
 import { ProductComponent } from './product/product.component';
 import { CrudeproductComponent } from './crudeproduct/crudeproduct.component';
 import { AssetcurdeComponent } from './assetcurde/assetcurde.component';
+import { SchoolcrudeComponent } from './schoolcrude/schoolcrude.component';
+import{ HttpModule } from '@angular/http';
+import { DoctorinfoComponent } from './doctorinfo/doctorinfo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,12 +22,15 @@ import { AssetcurdeComponent } from './assetcurde/assetcurde.component';
  MarksComponent,
  ProductComponent,
  CrudeproductComponent,
- AssetcurdeComponent
+ AssetcurdeComponent,
+ SchoolcrudeComponent,
+ DoctorinfoComponent
     
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

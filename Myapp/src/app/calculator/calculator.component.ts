@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculator.component.css']
 })
 export class CalculatorComponent implements OnInit {
-private a:string;
+ private a:string;
 private b:string;
 private c:number
   constructor() { }

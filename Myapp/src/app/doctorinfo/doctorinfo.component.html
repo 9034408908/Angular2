@@ -1,0 +1,30 @@
+<p>
+ Doctor Name:
+ <input [(ngModel)]="doc.doc_name">
+</p>
+<p>
+  Doctor Age:
+  <input [(ngModel)]="doc.doc_age">
+</p>
+<p>
+  Doctor Specilitty:
+  <input [(ngModel)]="doc.doc_spec">
+</p>
+<p>
+  Doctor Pic:
+  <input [(ngModel)]="doc.doc_pic">
+  <img *ngIf="doc.doc_pic" [src]="doc.doc_pic" width="100" height="100">
+</p>
+<p>
+  Status is {{stt}}
+</p>
+<button (click)="save()">Save Records</button>
+<table>
+  <th>Name</th><th>Age</th><th>Speciallity</th><th>Pic</th>
+  <tr *ngFor="let x of doctors">
+<td>{{x.data.doc_name}}</td>
+<td>{{x.data.doc_age}}</td>
+<td>{{x.data.doc_spec}}</td>
+<td>{{x.data.doc_pic}}</td>
+  </tr>
+</table>

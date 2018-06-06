@@ -1,0 +1,44 @@
+<div class="col-lg-12">
+  <div class="form-group">
+<label>School Name</label>
+<input [(ngModel)]="school.name" class="form-control">
+  </div>
+</div>
+<div class="col-lg-12">
+  <div class="form-group">
+    <label>Medium</label>
+    <input [(ngModel)]="school.medium" class="form-control">
+  </div>
+</div>
+<div class="col-lg-12">
+  <div class="form-group">
+    <label>Upto</label>
+    <input [(ngModel)]="school.upto" class="form-control">
+  </div>
+</div>
+<div class="col-lg-12">
+  <div class="form-group">
+    <label>State</label>
+    <input [(ngModel)]="school.state" class="form-control">
+  </div>
+</div>
+<div class="col-lg-12">
+  <div class="form-group">
+    <button *ngIf="btn_stt" (click)="save()">Save Records</button>
+    <button *ngIf="!btn_stt" (click)="update()">Update Records</button>  
+  </div>
+</div>
+<table class="table table-bordered">
+  <th>Sr. No.</th><th>Name</th><th>Medium</th><th>Upto</th><th>State</th>
+  <tr *ngFor="let x of schools; let i = index">
+    <td>{{i}}</td>
+    <td>{{x.name}}</td>
+    <td>{{x.medium}}</td>
+    <td>{{x.upto}}</td>
+    <td>{{x.state}}</td>
+    <button (click)="delete(i)">Delete Records</button>
+    <br>
+    <button (click)="edit(x)">Edit Records</button>
+  </tr>
+  
+</table>
