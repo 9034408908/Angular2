@@ -1,0 +1,39 @@
+<div class="container">
+<br>
+<div class="col-lg-12">
+  <div class="form-group">
+    <label>Media Company Name</label>
+    <input [(ngModel)]="media.name" class="form-control">
+  </div>
+</div>
+<div class="col-lg-12">
+  <div class="form-group">
+    <label>Media Company HeadQuater</label>
+    <input [(ngModel)]="media.head" class="form-control">
+  </div>
+</div>
+<div class="col-lg-12">
+  <div class="form-group">
+    <label>Media Company Tournover</label>
+    <input [(ngModel)]="media.turn" class="form-control">
+  </div>
+</div>
+<p>
+  Status is{{stt}}
+</p>
+<button *ngIf=btn_stt (click)="save()">Save Records</button>
+<button *ngIf=!btn_stt (click)="update()">Update Records</button>
+<table class="table table-bordered">
+  <th>Name</th><th>Headquater</th><th>Tournover</th>
+  <tr *ngFor="let x of medias">
+    <td>{{x.data.name}}</td>
+    <td>{{x.data.head}}</td>
+    <td>{{x.data.turn}}</td>
+    <td>
+      <button (click)="del(x.id)">Delete Records</button>
+      <button (click)="edit(x)">Edit Records</button>
+    </td>
+   
+  </tr>
+</table>
+</div>

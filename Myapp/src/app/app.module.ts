@@ -13,6 +13,13 @@ import { AssetcurdeComponent } from './assetcurde/assetcurde.component';
 import { SchoolcrudeComponent } from './schoolcrude/schoolcrude.component';
 import{ HttpModule } from '@angular/http';
 import { DoctorinfoComponent } from './doctorinfo/doctorinfo.component';
+import { ProductdatabaseComponent } from './productdatabase/productdatabase.component';
+import { PatientComponent } from './patient/patient.component';
+import { TestserviceComponent } from './testservice/testservice.component';
+import { ActorComponent } from './actor/actor.component';
+import { CheckstudentComponent } from './checkstudent/checkstudent.component';
+import { LoginpageComponent } from './loginpage/loginpage.component';
+import { MediaComponent } from './media/media.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +31,14 @@ import { DoctorinfoComponent } from './doctorinfo/doctorinfo.component';
  CrudeproductComponent,
  AssetcurdeComponent,
  SchoolcrudeComponent,
- DoctorinfoComponent
+ DoctorinfoComponent,
+ ProductdatabaseComponent,
+ PatientComponent,
+ TestserviceComponent,
+ ActorComponent,
+ CheckstudentComponent,
+ LoginpageComponent,
+ MediaComponent
     
   ],
   imports: [

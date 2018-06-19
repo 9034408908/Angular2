@@ -1,0 +1,48 @@
+<div class="container">
+  <br>
+<div class="col-lg-12">
+  <div class="form-group">
+    <label>Product Name</label>
+    <input [(ngModel)]="pro.pro_name" class="form-control">
+  </div>
+</div>
+<div class="col-lg-12">
+  <div class="form-group">
+    <label>Product Description</label>
+    <input [(ngModel)]="pro.pro_des" class="form-control">
+  </div>
+</div>
+<div class="col-lg-12">
+  <div class="form-group">
+    <label>Select Product</label>
+    <select [(ngModel)]="pro.pro_sel" class="form-control">
+      <option value="Beauty">Beauty</option>
+      <option value="Hair">Hair</option>
+      <option value="Home">Home</option>
+    </select>
+   </div>
+</div>
+<div class="col-lg-12">
+  <div class="form-group">
+    <label>Product Picture</label>
+    <input [(ngModel)]="pro.pro_pic" class="form-control">
+    <img *ngIf="pro.pro_pic" [src]="pro.pro_pic" width="100" height="100">
+  </div>
+</div>
+<p>
+  Status is {{stt}}
+</p>
+<button class="btn btn-danger" (click)="save()">Save Records</button>
+<table class="table table-bordered">
+  <th>Product Name</th><th>Product Description</th><th>Select Product</th><th>Product Picture</th>
+  <tr *ngFor="let prod of products">
+    <td>{{prod.data.pro_name}}</td>
+    <td>{{prod.data.pro_des}}</td>
+    <td>{{prod.data.pro_sel}}</td>
+    <td><img src="{{prod.data.pro_pic}}" width="100" height="100"></td>
+    <td><button (click)="delPro(prod.id)">Delete</button></td>
+  </tr>
+  
+</table>
+</div>
+
