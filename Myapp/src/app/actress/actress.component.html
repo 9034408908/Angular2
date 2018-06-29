@@ -1,0 +1,46 @@
+<p>
+  actress works!
+</p>
+<br>
+<div class="col-lg-12">
+  <div class="form-group">
+    <label>Name</label>
+    <input [(ngModel)]="actr.name" class="form-control">
+  </div>
+</div>
+<div class="col-lg-12">
+  <div class="form-group">
+    <label>Age</label>
+    <input [(ngModel)]="actr.age" class="form-control">
+  </div>
+</div>
+<div class="col-lg-12">
+  <div class="form-group">
+    <label>Picture</label>
+    <input [(ngModel)]="actr.pic" class="form-control">
+    <img *ngIf="actr.pic" [src]="actr.pic" width="100" height="100" >
+  </div>
+</div>
+<p>
+  {{stt}}
+</p>
+<button *ngIf="btn_stt" (click)="save()">Save Info</button>
+<button *ngIf="!btn_stt" (click)="update()">Update Info</button>
+<table class="table table-bordered">
+  <th>Name</th><th>Age</th><th>Picture</th>
+  <tr *ngFor="let x of actress">
+    <td>
+{{x.data.name}}
+    </td>
+    <td>
+      {{x.data.age}}
+    </td>
+    <td>
+      <img src={{x.data.pic}} width="100" height="100">
+    </td>
+    <td>
+      <button (click)="del(x.id)">Delete Info</button>
+      <button (click)="edit(x)">Edit Info</button>
+    </td>
+  </tr>
+</table>

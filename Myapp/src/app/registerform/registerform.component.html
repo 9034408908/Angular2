@@ -1,0 +1,15 @@
+<p>
+  registerform works!
+</p>
+<form #r="ngForm">
+FirstName:<input ngModel name="fnm" required  class="form-control"><br>
+LastName:<input ngModel name="lnm" required class="form-control"><br>
+Age:<input ngModel name="age" required class="form-control">
+<br>
+Gender:
+Male:<input ngModel name="gen" type="radio" value="male" required >
+Female:
+<input ngModel name="gen" type="radio" value="female" required >
+<br>
+<button [disabled]="!r.valid" (click)="register()">Register</button>
+</form>

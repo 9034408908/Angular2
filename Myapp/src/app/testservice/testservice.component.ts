@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RectangaleserviceService } from '../rectangaleservice.service';
-import { variable } from '@angular/compiler/src/output/output_ast';
+
 
 @Component({
   selector: 'app-testservice',

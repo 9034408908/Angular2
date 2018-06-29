@@ -51,6 +51,7 @@ console.log("Edited")
 update(){
   this.actor={};
   this.btn_stt=true;
+
   this.act.put('https://actor-9a478.firebaseio.com/actors/'+ this.edit_id + ".json", this.actor).subscribe(
     (res: Response) => {
       console.log("Record Updated")

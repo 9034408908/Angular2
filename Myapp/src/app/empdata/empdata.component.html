@@ -1,0 +1,28 @@
+<br>
+Name:
+<input [(ngModel)]="emp.name" class="form-control"><br>
+Age:
+<input [(ngModel)]="emp.age" class="form-control"><br>
+Salary:
+<input [(ngModel)]="emp.sal" class="form-control"><br>
+<p>
+  {{stt}}
+</p>
+<button  class="btn btn-success" (click)="save()">Save Records</button>
+<table class="table table-bordered">
+<th>NAME</th><th>AGE</th><th>SALARY</th><th>ACTION</th>
+<tr *ngFor="let x of emps">
+<td>
+  {{x.data.name}}
+</td>
+<td>
+  {{x.data.age}}
+</td>
+<td>
+  {{x.data.sal}}
+</td>
+<td>
+  <button class="btn btn-danger" (click)="del(x.id)">Delete Records</button>
+</td>
+</tr>
+</table>

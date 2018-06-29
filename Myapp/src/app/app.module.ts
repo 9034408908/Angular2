@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import { CalculatorComponent } from './calculator/calculator.component';
@@ -20,6 +19,12 @@ import { ActorComponent } from './actor/actor.component';
 import { CheckstudentComponent } from './checkstudent/checkstudent.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { MediaComponent } from './media/media.component';
+import { ActressComponent } from './actress/actress.component';
+import { VechileComponent } from './vechile/vechile.component';
+import { DoctorformComponent } from './doctorform/doctorform.component';
+import { RegisterformComponent } from './registerform/registerform.component';
+import { EmpdataComponent } from './empdata/empdata.component';
+import { FinanceregformComponent } from './financeregform/financeregform.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +43,13 @@ import { MediaComponent } from './media/media.component';
  ActorComponent,
  CheckstudentComponent,
  LoginpageComponent,
- MediaComponent
+ MediaComponent,
+ ActressComponent,
+ VechileComponent,
+ DoctorformComponent,
+ RegisterformComponent,
+ EmpdataComponent,
+ FinanceregformComponent
     
   ],
   imports: [

@@ -1,0 +1,25 @@
+<p>
+  doctorform works!
+</p>
+<form #f="ngForm">
+  Name:<input ngModel name="dname" required minlength="5" maxLength="20" #fn="ngModel" pattern="/^[a-zA-Z]+$/" class="form-control"><br>
+  <div *ngIf="fn.errors">
+<span *ngIf="fn.errors.required && fn.touched" style="color:red">Please enter required fields</span>
+<span *ngIf="fn.errors.minlength && fn.touched" style="color:red">Please enter minimum fields</span>
+<span *ngIf="fn.errors.pattern && fn.touched" style="color:blue">Invalid fields</span>
+  </div>
+  Age:
+  <input ngModel name="age" required class="form-control">
+  <br>
+   Mobile No:
+  <input ngModel name="mob" required class="form-control">
+  <br>
+  Speciallity
+  <select ngModel name="sep" required class="form-control">
+    <option value="ent">ENT</option>
+    <option value="cancer">Caner</option>
+    <option value="eyes">Eyes</option>
+  </select>
+  <br>
+  <button [disabled]="!f.valid" (click)="submit(f)">Submit</button>
+</form>

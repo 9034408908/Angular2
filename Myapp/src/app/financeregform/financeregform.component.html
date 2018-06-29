@@ -1,0 +1,15 @@
+<br>
+<form #s="ngForm">
+  FirstName:<input ngModel name="fnam" class="form-control" required><br>
+  LastName:<input ngModel name="lnam" class="form-control" required><br>
+  Age:<input ngModel name="age" class="form-control" required><br>
+  Department:<select ngModel name="dep" class="form-control" required>
+<option value="software">Software</option>
+<option value="hr">HR</option>
+<option value="finance">Finance</option>
+  </select><br>
+  <label>Gender: </label>
+  Male: <input type="radio" name="gen" value="male" required>
+  Female: <input type="radio" name="gen" value="female" required><br><br>
+    <button [disabled]="!s.valid" (click)="save()">Save Data</button>
+</form>
