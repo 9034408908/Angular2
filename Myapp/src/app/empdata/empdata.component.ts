@@ -9,7 +9,8 @@ export class EmpdataComponent implements OnInit {
 private emp:any={};
 private emps:any[]=[];
 private stt :string;
-
+private edit_id:string;
+private btn_stt:boolean=true;
 
   constructor(private emService: EmployserviceService) { 
     this.getempss();
@@ -46,6 +47,25 @@ this.emService.delete(id).subscribe(
     this.getempss();
   }
 )
+}
+edit(xx){
+  this.emp=xx.data;
+this.edit_id=xx.id;
+this.btn_stt=false;
+}
+update(){
+  
+  this.emService.update(this.edit_id,this.emp).subscribe(
+(res)=>{
+  console.log("update record")
+},
+(error)=>{
+  console.log("the error is",error)
+},
+    () => {
+      this.getempss();
+    }
+  )
 }
 
 save(){

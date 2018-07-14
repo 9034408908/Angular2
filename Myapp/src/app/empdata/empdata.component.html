@@ -8,7 +8,8 @@ Salary:
 <p>
   {{stt}}
 </p>
-<button  class="btn btn-success" (click)="save()">Save Records</button>
+<button  *ngIf="btn_stt" class="btn btn-success" (click)="save()">Save Records</button>
+<button *ngIf="!btn_stt" class="btn btn-success" (click)="update()">Update Records</button>
 <table class="table table-bordered">
 <th>NAME</th><th>AGE</th><th>SALARY</th><th>ACTION</th>
 <tr *ngFor="let x of emps">
@@ -22,7 +23,8 @@ Salary:
   {{x.data.sal}}
 </td>
 <td>
-  <button class="btn btn-danger" (click)="del(x.id)">Delete Records</button>
+  <button class="btn btn-danger" (click)="del(x.id)">Delete Records</button><br><br>
+  <button class="btn btn-primary" (click)="edit(x)">Edit Records</button>
 </td>
 </tr>
 </table>
