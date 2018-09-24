@@ -12,7 +12,7 @@ private actor:any={};
 private stt:string;
 private edit_id:string;
 private btn_stt:boolean=true;
-  constructor(private act: Http) { 
+constructor(private act: Http) { 
 this.getActors();
   }
 getActors(){

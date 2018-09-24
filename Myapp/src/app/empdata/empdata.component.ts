@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { EmployserviceService } from '../employservice.service';
+import { Router} from '@angular/router';
 @Component({
   selector: 'app-empdata',
   templateUrl: './empdata.component.html',
@@ -11,25 +12,25 @@ private emps:any[]=[];
 private stt :string;
 private edit_id:string;
 private btn_stt:boolean=true;
+private label= "Enter name";
 
-  constructor(private emService: EmployserviceService) { 
+  constructor(private emService: EmployserviceService, private routes:Router) { 
     this.getempss();
+
   }
 
   ngOnInit() {
-    
   }
+viewall(){
+  this.routes.navigate(["actor"]);
+}
 getempss(){
 this.emService.get().subscribe(
-  (res)=>{
-    let record=res.json();
-    let keys=Object.keys(record);
-    this.emps=keys.map(key=>{
-      return{id:key, data:record[key]};
-    })
-    console.log(this.emps)
+  data=>{
+    this.emps = data['emps'];
+    console.log(data);
   },
-  (err)=>{
+  err=>{
     console.log("the error is",err)
   }
 )
@@ -49,7 +50,7 @@ this.emService.delete(id).subscribe(
 )
 }
 edit(xx){
-  this.emp=xx.data;
+this.emp=xx.data;
 this.edit_id=xx.id;
 this.btn_stt=false;
 }

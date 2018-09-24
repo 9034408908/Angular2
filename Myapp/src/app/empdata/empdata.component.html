@@ -1,4 +1,9 @@
+<div class="col-sm-12">
+<div class="col-sm-3 empdata">
+  <app-sidebar></app-sidebar>
+</div>
 <br>
+<div class="col-sm-9">
 Name:
 <input [(ngModel)]="emp.name" class="form-control"><br>
 Age:
@@ -8,6 +13,7 @@ Salary:
 <p>
   {{stt}}
 </p>
+<button (click)="viewall()" class="btn btn-primary">Viewall</button>
 <button  *ngIf="btn_stt" class="btn btn-success" (click)="save()">Save Records</button>
 <button *ngIf="!btn_stt" class="btn btn-success" (click)="update()">Update Records</button>
 <table class="table table-bordered">
@@ -28,3 +34,5 @@ Salary:
 </td>
 </tr>
 </table>
+</div>
+</div>
